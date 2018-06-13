@@ -1,0 +1,18 @@
+------------
+Description:
+------------
+camsave.py	- 
+ImageManip.py	- multiple short examples of image manipulation
+ImgSave.py	- 
+JPEG.py		- 
+resize1.py	- 
+resize2.py	- 
+resize3.py	- 
+resize4.py	- 
+resize5.py	- 
+
+----------------
+To run the code:
+----------------
+python ocr_template_match.py --image images/credit_card_01.png --reference ocr_a_reference.png
+
