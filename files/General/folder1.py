@@ -8,6 +8,8 @@ Python 2.7
 	=> create new directory with incremented name
 -> if no directories in parent dir:
 	=> create new directory for images "dir_0"
+
+Problem: places new folder outside folcder checking!!
 """
 
 import sys
@@ -36,15 +38,16 @@ def main():
 	comp = 0
 	temp = 0
 	size = 0
-	new_dir = "/home/antz/0_Python/files/pics/dir_x"
-	file_path1 = "/home/antz/0_Python/files/pics"				# path to woring director
-	file_path2 = "/home/antz/0_Python/files/pics/dir_0/0"		# path to images
-	
+	new_dir    = "/home/antz/0_samples/scrapy/"					# path to new folder location
+	file_path1 = "/home/antz/0_samples/scrapy/"					# path to images
+	file_path2 = "/home/antz/0_samples/scrapy/dir_0"			# path to wrong directory
+	folder     = "scrapy/"
 	## Check for directory, if not then create it ##
 	directory = os.path.dirname(file_path2)						# check in images file path
 	if not os.path.exists(directory):							# if directory doesn't exist
 		print("Image Directory Created!")						# Notify if directory was created
 		os.makedirs(directory)									# Create the directory
+
 	else:
 		print(str(file_path2))
 		try:													# 

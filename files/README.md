@@ -35,6 +35,10 @@ write0.py
 * If exists, opens existing file reads & prints contents  
 * Appends the names of each file in the folder of "file_path2" 
 
+**fileA.py**
+
+* Creates a file if it doesn't already exist and appends text to that file
+
 **execute1.py**  
 
 * [Linux]   Executes a file at file path in default its Application 
@@ -46,6 +50,14 @@ write0.py
 **createFile.py**  
 
 * Creates a file if it doesn't already exist and appends text to that file  
+
+**createFile2.py**  
+
+* Check and fill this in?
+
+**rename.py**  
+
+* Renames all files in a given directory to provided name+incrementally 
 
 **getWiki.py**  
 

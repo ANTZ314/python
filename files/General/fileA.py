@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Mar 23 15:44:39 2017
-@author: antz
 Description:
 Creates a file if it doesn't already exist and appends text to that file
 https://www.youtube.com/watch?v=YV6qm6erphk&index=23&list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_&spfreload=10
