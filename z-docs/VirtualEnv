@@ -1,0 +1,14 @@
+=========================================================
+ACTIVATE THE OPENCV ENV:
+------------------------
+$ source /home/antz/virtualenv/CVenv/bin/activate
+
+INSTALL:
+$ sudo -H /home/antz/virtualenv/CVenv/bin/pip3 install -U --no-deps 'packages'
+
+CHECK:
+$ /home/antz/virtualenv/CVenv/bin/pip3 freeze
+
+RUN:
+$ /home/antz/virtualenv/CVenv/bin/python 'script.py'
+=========================================================

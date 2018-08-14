@@ -7,7 +7,7 @@ Created on Mon Mar 13 14:59:42 2017
 import cv2
 
 def main():
-	filename = '../pics/face/gr0.jpg'
+	filename = '../pics/gr0.jpg'
 	cam = cv2.VideoCapture(0)
 	frame = cam.read()[1]
 	cv2.imwrite(filename, frame)

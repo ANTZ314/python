@@ -2,7 +2,7 @@
 
 """
 PyAudio Example: Play a WAVE file.
-To call file: python PlayWAV1.py file.wav ? ?
+To call file: python PlayWAV.py file.wav ? ?
 """
 import pyaudio
 import wave
@@ -10,29 +10,26 @@ import sys
 
 CHUNK = 1024
 
-def main():
-	if len(sys.argv) < 2:
-		print("Plays a wave file.\n\nUsage: %s filename.wav" % sys.argv[0])
-		sys.exit(-1)
+if len(sys.argv) < 2:
+    print("Plays a wave file.\n\nUsage: %s filename.wav" % sys.argv[0])
+    sys.exit(-1)
 
-	wf = wave.open(sys.argv[1], 'rb')
+wf = wave.open(sys.argv[1], 'rb')
 
-	p = pyaudio.PyAudio()
+p = pyaudio.PyAudio()
 
-	stream = p.open(format=p.get_format_from_width(wf.getsampwidth()),
-					channels=wf.getnchannels(),
-					rate=wf.getframerate(),
-					output=True)
+stream = p.open(format=p.get_format_from_width(wf.getsampwidth()),
+                channels=wf.getnchannels(),
+                rate=wf.getframerate(),
+                output=True)
 
-	data = wf.readframes(CHUNK)
+data = wf.readframes(CHUNK)
 
-	while data != '':
-		stream.write(data)
-		data = wf.readframes(CHUNK)
+while data != '':
+    stream.write(data)
+    data = wf.readframes(CHUNK)
 
-	stream.stop_stream()
-	stream.close()
+stream.stop_stream()
+stream.close()
 
-	p.terminate()
-
-if __name__ == "__main__":  main()
+p.terminate()

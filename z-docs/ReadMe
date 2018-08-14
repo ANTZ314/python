@@ -1,0 +1,26 @@
+All Python files start with:
+# -*- coding: utf-8 -*-
+
+if __name__ == '__main__':
+    main()
+
+--------------------------------------------
+Remember to work in the  virtual enviroment:
+--------------------------------------------
+===============================================================================
+ACTIVATE THE OPENCV ENV:
+$ workon cv
+-------------------
+$ deactivate
+===============================================================================
+------------
+Description:
+------------
+
+audio		- Various PyAudio based triggering and recording to .wav
+files		- text document and file manipulation
+image		- Image pre-processing (format, resize, save)
+pics		- Original sample images (various dimensions and sizes)
+
+===============================================================================
+
