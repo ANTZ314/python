@@ -35,17 +35,23 @@ write0.py
 * If exists, opens existing file reads & prints contents  
 * Appends the names of each file in the folder of "file_path2" 
 
+**write6.py**
+
+* Opens CSV file and copies dataset  
+* If text file doesn't exist, file is created and dataset added  
+* If text file exists, opens and appends new dataset from CSV
+
 **fileA.py**
 
 * Creates a file if it doesn't already exist and appends text to that file
 
 **execute1.py**  
 
-* [Linux]   Executes a file at file path in default its Application 
+* [Linux]   Executes a file at file path in its default Application 
 
 **execute2.py**  
 
-* [Windows] Executes a file at file path in default its Application
+* [Windows] Executes a file at file path in its default Application
 
 **createFile.py**  
 

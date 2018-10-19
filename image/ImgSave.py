@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Mar 13 14:59:42 2017
+Description:
 
-@author: antz
+Usage:
+python 
 """
 
 import cv2

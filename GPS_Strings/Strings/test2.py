@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Trying to save each input character into string or list
+Description:
+Append, and print of lists, strings
 """
 import sys
 from time import sleep
@@ -18,7 +19,7 @@ def run():
 	for j in range(0,len(words)):
 		print(word2[j]),
 
-	choice = raw_input("Exit\r\n")
+	choice = input("Exit\r\n")
 	if choice == 'q':
 		print('\r\nexit!!')
 		sys.exit(0)

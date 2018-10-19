@@ -15,12 +15,13 @@ def run():
 		print("{}".format(vag))
 
 	while choice != 'q':
-		choice = raw_input("")
+		#choice = raw_input("q to quit")
+		choice = input("'q'to quit\n")
 		if choice == 'a':
 			#sys.exit(0)
-			print('a'),
+			print('a was pressed'),
 		else:
-			print("*"),
+			print("* QUIT *"),
 	print('exit!!')
 	sys.exit(0)
 		
