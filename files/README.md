@@ -2,7 +2,8 @@
 # File Editing Python Scripts:  
 ------------------------------
 ### Description:
-write0.py  
+
+**write0.py**  
 * Opens existing file reads & prints contents then appends 10 new lines  
 
 **write1.py**  

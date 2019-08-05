@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Apr 21 10:09:28 2017
-@author: Antony Smith
-Python:  2.7
-Description: - Check, identify and auto-select audio input device
-             - Initialise PyAudio with this device
-             - Wait for (RMS > Threshold) as trigger event
+Created on Wed Apr 19 12:09:28 2017
+@author: antz
+Description: - Check and auto-select audio input device
+             - Initialise with default device (not found device)
+             - Wait for RMS > Threshold as trigger
              - Trigger records until 'silence time-out' to stop
+             
+Must change to Python3.6 for laptop, but Python2.7 for LattePanda
+ - brackets on 'print'
+ - line 115 for statement
 """
 
 import pyaudio
@@ -14,32 +17,33 @@ import math
 import struct
 import wave
 import sys
+from builtins import range		# for backwards/forwards compatability btwn 2.7 & 3.6
+
+#Assuming Energy threshold upper from 30 dB
+Threshold = 2                          # was 30
 
 FORMAT = pyaudio.paInt16                # Default unchanged
-Threshold = 10                          # Energy threshold upper from 30 dB
-CHUNK = 4096                            # Audio chunk size 2**12 (default 1024)
-CHANNELS = 2                            # will change according to audio device
-RATE = 48000                            # Samson sample rate
-DEVICE = 4                              # Will change if Audio device is found
-
-#Threshold = 2                           # Energy threshold upper from 30 dB
-#CHUNK = 1024                            # Audio chunk size 2**12 (default 1024)
-#CHANNELS = 1                            # default
-#RATE = 44100                            # default
-
+#CHUNK = 4096                            # Audio chunk size 2**12 (default 1024)
+#CHANNELS = 2                            # will change according to audio device
+#RATE = 48000                            # Samson sample rate
+DEVICE = 0                              # Found with "Device1/2.py"
+CHUNK = 1024                            # Audio chunk size 2**12 (default 1024)
+CHANNELS = 1                            # default
+RATE = 44100                            # default
 RECORD_SECONDS = 5                      # increase?
-WAVE_OUTPUT_FILENAME = "Trigger3.wav"   # Storage file name
+WAVE_OUTPUT_FILENAME = "AUDIO7.wav"     # Storage file name
+
 SHORT_NORMALIZE = (1.0/32768.0)         # What is this for?
 swidth = 2                              # 
 Max_Seconds = 10                        # Time-out length
-TimeoutSignal=((RATE / CHUNK * Max_Seconds) + 2)    # 2.46875 ?
-silence = True                          # 
-Time=0                                  # 
-all =[]                                 # 
+TimeoutSignal=((RATE / CHUNK * Max_Seconds) + 2)    # 432.66
+silence = True                          #
+Time=0                                  #
+all =[]                                 #
 
-p = pyaudio.PyAudio()                   # 
-info = p.get_host_api_info_by_index(0)  # 
-numdevices = info.get('deviceCount')    # 
+p = pyaudio.PyAudio()                   #
+info = p.get_host_api_info_by_index(0)  #
+numdevices = info.get('deviceCount')    #
 frames = []                             # defined globally for both functions -> pass?
 
 stream = p.open(format = FORMAT,
@@ -49,7 +53,6 @@ stream = p.open(format = FORMAT,
                 input = True,
                 output = True,
                 frames_per_buffer = CHUNK)
-                
 
 def find_device():
     Okay = 0        # Device found? (1 = Yes / 0 = No)
@@ -73,11 +76,14 @@ def find_device():
                              input_device=devinfo["index"],
                              input_channels=devinfo['maxInputChannels'],
                              input_format=pyaudio.paInt16):
-                                 print ('\nSupported Device Info:\nDevice: {0}\nChannels: {1}'.format(str(devinfo["index"]),str(devinfo['maxInputChannels'])))
+                                 print ('\nSupported Device Info:\nDevice Number: {0}\nWith Channels: {1}'.format(str(devinfo["index"]),str(devinfo['maxInputChannels'])))
 
     else:
-        print "No Audio device found... Exit for now"
+        print ("No Audio device found... Exit for now")
         sys.exit()
+
+    #print("\nTerminating...")
+    #p.terminate()
 
 def GetStream(CHUNK):
     return stream.read(CHUNK)
@@ -109,6 +115,10 @@ def WriteSpeech(WriteData):
 def KeepRecord(TimeoutSignal, LastBlock):
 
     all.append(LastBlock)
+    
+    ## Python3 error: float as int (convert) ##
+    TimeoutSignal=math.floor(TimeoutSignal)
+    
     for i in range(0, TimeoutSignal):
         try:
             data = GetStream(CHUNK)
@@ -117,50 +127,50 @@ def KeepRecord(TimeoutSignal, LastBlock):
         #I chage here (new Ident)
         all.append(data)
 
-    print "End record after timeout"
+    print ("End record after timeout")
     data = ''.join(all)
-    print "Write to File: {0}".format(WAVE_OUTPUT_FILENAME)
+    print ("Write to File: {0}".format(WAVE_OUTPUT_FILENAME))
     WriteSpeech(data)
     #silence = True
     #Time=0
     #listen(silence,Time)
-    print"END HERE!!"
+    print("END HERE!!")
     sys.exit()
 
 def listen(silence,Time):
-    count = 0                           # generic counter to display RMS
-    item = "."                          # count indicator for RMS display
-    print "\nWaiting for Speech..."
+    count = 0
+    print ("waiting for Speech")
     while silence:
+
         try:
             input = GetStream(CHUNK)
+
         except:
             continue
+
         rms_value = rms(input)
-        count += 1                      # counter to not show RMS too often
-        print item,                     # show counter
-        
-        # Print the RMS value
-        if count == 50:
+        count += 1
+
+        if count == 80:
             print("{0}".format(rms_value))
-            count = 0                   # restart counter
-            
-        
+            count = 0               # restart counter
+
         if (rms_value > Threshold):
-            #print "RMS ABOVE! {0}".format(rms_value)
             silence=False
             LastBlock=input
-            print "I'm Recording...."
+            print ("I'm Recording....")
             KeepRecord(TimeoutSignal, LastBlock)
-            
+
         Time = Time + 1
 
         if (Time > TimeoutSignal):
-            print "Time Out: No Speech Detected"
+            print ("Time Out: No Speech Detected")
             sys.exit()
 
 if __name__ == "__main__":
     devinfo = find_device()     # Get the details of the audio device
-    #print "Begin Process..."	
+    print ("Begin Process...")	
     listen(silence,Time)        # pass found audio device details
+    #getAudio(devinfo)
+    #makeFile()
     print("Complete...")
