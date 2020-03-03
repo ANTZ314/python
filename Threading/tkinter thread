@@ -1,0 +1,21 @@
+
+
+Tkinter Multi-Threading:
+========================
+
+Tkinter isn't a thread safe module for python, so you may find that even if you do get 
+the programming running without errors, it randomly fails to respond and completely 
+crashes at random points throughout the program. Any Tkinter related calls that get 
+made make sure they are made in the main thread with the exception of root.after(). 
+I would suggest doing all your processing in separate threads, and then when using Tkinter 
+call methods you want via the after method with a delay of 1, which will ensure no random 
+crashes. This wont fix your current issues, but it will fix ones later.
+
+LINKS:
+------
+
+https://stackoverflow.com/questions/16745507/tkinter-how-to-use-threads-to-preventing-main-event-loop-from-freezing
+
+https://www.reddit.com/r/Python/comments/7rp4xj/threading_a_tkinter_gui_is_hell_my_least_favorite/
+
+https://mail.python.org/pipermail/tkinter-discuss/2007-June/001148.html
