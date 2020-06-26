@@ -1,9 +1,30 @@
 
 # File Editing Python Scripts:  
 ------------------------------
-### Description:
+## Description:
 
+####CLASSTEST:
+**main.py**
+
+* Descrip?
+
+**ClassTest1.py**
+
+* Descrip?
+
+**ClassTest1.py**
+
+* Descrip?
+
+####CSV:
+**csv1.py**
+
+* If file doesn't exist, create
+* Write new row to CSV
+
+####WRITE:
 **write0.py**  
+
 * Opens existing file reads & prints contents then appends 10 new lines  
 
 **write1.py**  
@@ -42,9 +63,15 @@
 * If text file doesn't exist, file is created and dataset added  
 * If text file exists, opens and appends new dataset from CSV
 
-**fileA.py**
+####GENERAL:
 
-* Creates a file if it doesn't already exist and appends text to that file
+**createFile.py**  
+
+* Creates a file if it doesn't already exist and appends text to that file  
+
+**DownloadImage.py**
+
+* Descrip?
 
 **execute1.py**  
 
@@ -54,17 +81,23 @@
 
 * [Windows] Executes a file at file path in its default Application
 
-**createFile.py**  
+**fileA.py**
 
-* Creates a file if it doesn't already exist and appends text to that file  
+* Creates a file if it doesn't already exist and appends text to that file
 
-**createFile2.py**  
+**fileB.py**
 
-* Check and fill this in?
+* Descrip?
 
-**rename.py**  
+**folder1.py**	
 
-* Renames all files in a given directory to provided name+incrementally 
+* get list of folder names within a folder  
+* if existing folders:  
+	* check directory's last character "dir_0, dir_1, folder_2..."  
+	* compare character sizes and save highest number  
+	* create new directory with incremented name  
+* if no directories in parent dir:  
+	* create new directory for images "dir_0"
 
 **getWiki.py**  
 
@@ -78,16 +111,12 @@
 
 * Open a file (GIF) with it's default application
 
-**folder1.py**	
+**rename.py**  
 
-* get list of folder names within a folder  
-* if existing folders:  
-	* check directory's last character "dir_0, dir_1, folder_2..."  
-	* compare character sizes and save highest number  
-	* create new directory with incremented name  
-* if no directories in parent dir:  
-	* create new directory for images "dir_0"
+* Renames all files in a given directory to provided name+incrementally 
 
+
+####USB:
 **usb0.py**  
 
 * Checks for USB device, if found,  
@@ -103,10 +132,10 @@
 
 **usbbash.py**  
 
-* descrip  
+* descrip?  
 **usbbash.sh**  
 
-* descrip
+* descrip? 
 
 ### Useful links:  
 [LINK1](https://docs.python.org/2/tutorial/inputoutput.html)  

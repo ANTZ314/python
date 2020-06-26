@@ -1,6 +1,19 @@
-
+============
 Description:
-------------
+============
+
+CLASSTEST:
+----------
+main.py			- 
+
+ClassTest1.py	- 
+
+ClassTest1.py	- 
+
+
+------
+WRITE:
+------
 write0.py		- Opens existing file reads & prints contents then appends 10 new lines
 
 write1.py		- If file doesn't exist, file is created 
@@ -27,6 +40,9 @@ write6.py		- Opens CSV file and copies dataset
 				- If text file doesn't exist, file is created and dataset added  
 				- If text file exists, opens and appends new dataset from CSV
 
+--------
+GENERAL:
+--------
 execute1.py		- [Linux]   Executes a file at file path in default its Application
 execute2.py		- [Windows] Executes a file at file path in default its Application
 
