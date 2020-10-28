@@ -1,0 +1,31 @@
+{
+    "Machine Type" : "T6 taper roller",
+    "Furnace Tempreture" :
+    [
+        {  "Thermocouple1 tempreature" : float},
+        {  "Thermocouple2 tempreature" : float},
+	{  "Thermocouple3 tempreature" : float},
+	{  "Average tempreature" : float}		
+    ],
+	"Motor1 current" :
+    [
+        {  "Phase 1 current" : float},
+        {  "Phase 2 current" : float},
+        {  "Phase 3 current" : float},
+	{  "Average current" : float}			
+    ],
+	"Motor2 current" :
+    [
+        {  "Phase 1 current" : float},
+        {  "Phase 2 current" : float},
+        {  "Phase 3 current" : float},	
+	{  "Average current" : float}
+    ],
+	"Preassure" :
+    [
+        {  "Preassure 1" : float},
+        {  "Preassure 2" : float}
+    ],
+    "Water tower tempreature" : float,
+    "Rolling counter" : Integer
+}

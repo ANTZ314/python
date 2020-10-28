@@ -63,6 +63,10 @@
 * If text file doesn't exist, file is created and dataset added  
 * If text file exists, opens and appends new dataset from CSV
 
+**write6.py**
+
+* Quick create, write & close multiple files
+
 ####GENERAL:
 
 **createFile.py**  

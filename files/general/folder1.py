@@ -9,7 +9,7 @@ Python 2.7
 -> if no directories in parent dir:
 	=> create new directory for images "dir_0"
 
-Problem: places new folder outside folcder checking!!
+Problem: places new folder outside folder checking!!
 """
 
 import sys
