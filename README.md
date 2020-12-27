@@ -63,3 +63,9 @@
 **Description:** Should be moved to image/opencv folder?
 
 * Raspberry Pi timelapse based code (possibly converted to webcam)
+
+###video 
+**Description:** Concatinate multiple video files into single output video
+
+* video.md - descibes multiple methods
+* Method 2 (input.txt file) tested and works
