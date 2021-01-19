@@ -1,0 +1,13 @@
+
+Plot over-lay ETH & BTC:
+------------------------
+
+. Get 1 month data: BTC 		| X
+. Get 1 month data: ETH			| X
+. Convert BTC to numerical 		| X
+. Convert ETH to numerical 		| X
+. Plot BTC - independent Y		| X
+. Plot ETH - independent Y		| X
+
+
+FIND NUMERICAL DATA SOURCE!!!
