@@ -2,7 +2,7 @@
 Description:
 	Hnaldes multiple types of ERRORS
 """
-import sys, time								# system things
+import sys						# system things
 
 
 ###################

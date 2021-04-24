@@ -1,15 +1,13 @@
 """
 Description:
 	Calculates the profit/loss when selling crypto
-	Based on: 
-		the amount put down	[-a, --amount]
-		the price bought at [-b, --buy]
-		the price sold at 	[-s, --sell]
-
+	Amount put down	[-a, --amount]
+	Price bought at [-b, --buy]
+	Price sold at 	[-s, --sell]
 Usage:
+	python cryptoProf2.py -b .0 -s .0 -a .0
 	python cryptoProf2.py -b 500.0 -s 650.0 -a 200.0
 	python cryptoProf2.py --buy 500.0 --sell 650.0 --amount 200.0
-	python cryptoProf2.py -b .0 -s .0 -a .0
 """
 import time 										# 
 import sys											# 

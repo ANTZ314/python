@@ -1,6 +1,7 @@
 """
 Description:
-	Based on price bought & sold - Calculates the profit/loss when selling crypto
+	Based on price bought & sold
+	Calculates the profit/loss when selling crypto
 
 Usage:
 	python cryptoProfit.py
@@ -13,7 +14,7 @@ def main():
 	buy_price  	= 500.00								# price per crypto when bought ($)
 	sell_price 	= 650.00								# price per crypto when sold ($)
 	amount 		= 200.00								# value of purchase ($)
-	inc_dec		= 0.05								# percentage increase/decrease (%)
+	inc_dec		= 0.05									# percentage increase/decrease (%)
 	output		= 0.00									# value of profit/loss
 
 	try:

@@ -3,6 +3,12 @@ Description:
 	- Lump sum deposit amount for 'x' years
 	- Calculates Total + annual compound (nominal) interest
 	- R50k @ 4.1% nominal interest for 'withdraw' years
+
+Note:
+	- Set values in code
+
+Use:
+	- python interest1.py
 """
 import time 										# 
 import sys											# 
@@ -20,8 +26,7 @@ def main():
 	r = 0.041										# interest rate (above inflation)
 
 	try:
-		print("R{} lump sum @ {}% interest".format(inv_amount, (r*100)))
-
+		print("R{} lump sum @ {:0.2f}% interest".format(inv_amount, (r*100)))
 
 		## maximum investment each year
 		total = total + inv_amount

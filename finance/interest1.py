@@ -1,10 +1,17 @@
 """
 Description:
+	- Calculates total investment + interest accrued for each year
 	- Continuous monthly installments = annual amount
 	- Calculates Total + annual compound interest
+
+Note:
+	- Set values in code
+
+Use:
+	- python interest1.py
 """
-import time 						# 
-import sys							# 
+import time 										# 
+import sys											# 
 
 
 def main():
@@ -19,7 +26,9 @@ def main():
 	r = 0.041										# 3% interest rate (above inflation)
 
 	try:
-		print("R{} per month @ {}% interest".format(inv_amount, (r*100)))
+		print("R{} per month @ {:0.2f}% interest".format(inv_amount, (r*100)))
+		
+		## maximum investment each year
 		inv_amount = inv_amount * months			# get annual amount
 
 		while years < withdraw:
@@ -32,8 +41,8 @@ def main():
 			total = total + interest
 
 			print("Year: {} Total: {:0.2f}".format(str(years+1), total))
-			time.sleep(1)			## Wait
-			years += 1				# decrement
+			time.sleep(1)							## Wait
+			years += 1								# decrement
 		
 		## End the run
 		sys.exit(0)

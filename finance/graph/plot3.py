@@ -1,11 +1,20 @@
 """
 CRYPTO CSV PRE-PROCESSING:
-	-> READ DATA TO ARRAYS			| x
-	-> CHECK DATA TYPES				| x
-	-> SET TO 2 DECIMAL PLACES		| x
-	-> PLOT SINGLE CHART			| x
-	-> PLOTTING VALUES				| x
-	-> WRITE LISTS BACK INTO CSV 	| .
+	-> READ DATA TO ARRAYS (ALL)		| x
+	-> CHECK DATA TYPES					| x
+	-> SET TO 2 DECIMAL PLACES			| x
+	-> PLOT SINGLE CHART				| x
+	-> PLOTTING VALUES					| x
+	-> WRITE LISTS BACK INTO CSV 		| .
+
+Insert Latest Data:
+	-> Download latest ETH & BTC
+	-> Copy from last date to current date
+	-> left click -> special paste -> "shift down"
+	-> Delete extra cell
+Note:
+	-> Remove numbered column
+	-> Add headings: DATE | BTC_OPEN | ETH_OPEN
 """
 
 import csv, time, sys
@@ -17,7 +26,7 @@ import matplotlib.dates as mdates
 import datetime as dt
 
 
-file1 = "crypto/BTC.csv"
+file1 = "crypto/BTC_ETH3.csv"
 
 DATE2 = []
 
