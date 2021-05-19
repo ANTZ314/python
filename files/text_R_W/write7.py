@@ -1,5 +1,5 @@
 """
-Quick create, write & close multiple files
+Quick CSV: create/open, write & close multiple files
 """
 
 import csv, time, sys

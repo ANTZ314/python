@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Python 2.7 (virtual env)
-If file doesn't exist, file is created
-If exists, opens existing file reads & prints contents
-Appends 10 new lines
+Open CSV file & read the number of rows in column 1
+If text file doesn't exist, file is created
+If exists, opens the file & writes the array size
+Don't append twice if file exists
 """
 import pandas as pd
 

@@ -1,5 +1,7 @@
 """
-Open, read file to terminal
+Description:
+* Open CSV file, print contents, close file
+* commented - write to file
 """
 
 import csv, time, sys
