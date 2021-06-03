@@ -1,2 +1,0 @@
-write some text to the sample file
-more sample text to the file
