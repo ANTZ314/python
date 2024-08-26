@@ -1,8 +1,8 @@
 # Python:
 
-### Python Test Code in sub-sections
+###Python Test Code in sub-sections
 
-### functional
+###finctional
 
 **Description:**
  
@@ -13,10 +13,10 @@
 * **timeout.py** - countdown timer code from Jan 1970
 * **interest.py** - calculates the annual compound interest + annual investment amount for 'x' number of years.
 
-### audio
-**Description:** Various PyAudio-based triggering and recording to .wav
+###audio
+**Description:** Various PyAudio based triggering and recording to .wav
 
-### files	
+###files	
 **Description:** Text document and file manipulation
 
 * **classTest** - 
@@ -31,41 +31,43 @@
 	* write5.py - 
 	* write6.py -
 	* write7.py - 
-* **usb** - USB related control code
+* **usb** - 
 
-### finance	
-**Description:** Finance-based quick calculators. Input values must be edited in code.
+###finance	
+**Description:** Finance based quick calculators. Input values must be edited in code.
 
 * **cryptoProf2.py** 
 	* Calculates the profit/loss when selling crypto.
 	* Based on: the amount put down	[-a, --amount], the price bought at [-b, --buy], the price sold at 	[-s, --sell]
 * **cryptoProf1.py** - Calculate profit/loss based on crypto purchase price & amount from bought to sold
-* **interest1.py** - Calculate the monthly investment amount including monthly instalments & compound interest
+* **interest1.py** - Calculate the monthly investment amount including monthly installments & compound interest
 * **interest2.py** - Calculate total investment amount after 'x' years plus compound interest
 * **taxfree.py** - Calculates wealth accrued by depositing the maximum amount of R30 000 annually for 'x' years
 
-### GPS_Strings
+### google
+* Download multiple images scraped from Google - **I THINK??**
+###GPS_Strings
 **Description:** 
 
 * GPS string manipulation from project Gunshot
 
-### image
+###image
 **Description:** 
 
 * Image pre-processing (format, resize, save)
 
-### threading
+###threading
 **Description:** 
 
 * various threading examples (tested on RasPi)
 
-### timelapse 
+###timelapse 
 **Description:** Should be moved to image/opencv folder?
 
-* Raspberry Pi timelapse-based code (possibly converted to webcam)
+* Raspberry Pi timelapse based code (possibly converted to webcam)
 
-### video 
-**Description:** Concatenate multiple video files into a single output video
+###video 
+**Description:** Concatinate multiple video files into single output video
 
-* video.md - describes multiple methods
+* video.md - descibes multiple methods
 * Method 2 (input.txt file) tested and works
