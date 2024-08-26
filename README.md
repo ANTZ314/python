@@ -44,8 +44,6 @@
 * **interest2.py** - Calculate total investment amount after 'x' years plus compound interest
 * **taxfree.py** - Calculates wealth accrued by depositing the maximum amount of R30 000 annually for 'x' years
 
-### google
-* Download multiple images scraped from Google - **I THINK??**
 ###GPS_Strings
 **Description:** 
 

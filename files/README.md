@@ -170,25 +170,26 @@
 
 ---
 ### USB:
-**usb0.py**
+**usb0.py**  
 
-* Checks for USB device, if found,
+* Checks for USB device, if found,  
 * Moves the specified file (if exists) to the USB path
 
-**usb1.py**
+**usb1.py**  
 
 * Lists all attached USB modules by location and name 
 
-**usb2.py**
+**usb2.py**  
 
 * Doesn't seem to do anything, though no error?
 
-**usbbash.py**
+**usbbash.py**  
 
 * Uses "subprocess" to run "usbbash.sh" script
 * usbbash.sh - NOT SURE (TEST) ? ?
 
-**usbbash.sh**
+
+**usbbash.sh**  
 
 * Quick usb mounter using udiskie-mount 
 
